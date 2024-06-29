@@ -1,3 +1,5 @@
+package Model;
+
 public interface AccountsRepository {
     void saveAccount(Account account);
     Account getAccount(String cardNumber);

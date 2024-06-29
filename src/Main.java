@@ -1,3 +1,7 @@
+import Controller.ATMController;
+import Model.*;
+import View.ConsoleView;
+
 public class Main {
     public static void main(String[] args) {
         AccountsRepository fileAccountRepository = new FileAccountRepository();
