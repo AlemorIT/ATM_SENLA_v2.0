@@ -8,7 +8,10 @@ public class AccountService {
     public AccountService(AccountsRepository fileAccountRepository) {
         this.fileAccountRepository = fileAccountRepository;
     }
-
+    public boolean authorizePin(String cardNumber, String pin){
+        Account account = fileAccountRepository.getAccount(cardNumber);
+        return account.getPin().equals(pin);
+    }
     public boolean authorizeAccount(String cardNumber, String pin) {
         Account account = fileAccountRepository.getAccount(cardNumber);
         if (account == null) {
@@ -22,7 +25,7 @@ public class AccountService {
                 fileAccountRepository.updateAccount(account);
             }
         }
-        return account.getPin().equals(pin);
+        return true;
     }
     public boolean isValidCardNumber(String cardNumber) {
         //The Luhn Formula:

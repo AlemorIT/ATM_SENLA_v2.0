@@ -7,6 +7,7 @@ public class ATMController {
     private final ConsoleView consoleView;
     private final AccountService accountService;
     private String cardNumber;
+    private String pin;
     public ATMController(ConsoleView consoleView, AccountService accountService) {
         this.consoleView = consoleView;
         this.accountService = accountService;
@@ -42,7 +43,16 @@ public class ATMController {
         do{
             cardNumber = consoleView.inputCardNumber();
         } while (!accountService.isValidCardNumber(cardNumber));
-        String pin = consoleView.inputPin();
+        byte counter = 0;
+        do {
+            pin = consoleView.inputPin();
+            counter +=1;
+            if(counter == 3){
+                accountService.blockAccount(cardNumber);
+                System.out.println("Превышено количество попыток. Карта заблокирована на сутки.");
+                System.exit(0);
+            }
+        }while(!accountService.authorizePin(cardNumber, pin));
         if (accountService.authorizeAccount(cardNumber, pin)) {
             consoleView.showSuccessMessage("Авторизация прошла успешно.");
         } else {

@@ -1,11 +1,13 @@
 package Model;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
 public class FileAccountRepository implements AccountsRepository {
     private static final String DATA_FILE = "accounts.txt";
+
     @Override
     public void saveAccount(Account account) {
         Map<String, Account> accounts = new HashMap<>();
@@ -13,7 +15,7 @@ public class FileAccountRepository implements AccountsRepository {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(" ");
-                accounts.put(parts[0], new Account(parts[0], parts[1], Double.parseDouble(parts[2])));
+                accounts.put(parts[0], new Account(parts[0], parts[1], Double.parseDouble(parts[2]), Boolean.parseBoolean(parts[3]), LocalDateTime.parse(parts[4])));
             }
         } catch (IOException e) {
             System.err.println("Error loading account data: " + e.getMessage());
@@ -22,7 +24,7 @@ public class FileAccountRepository implements AccountsRepository {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(DATA_FILE))) {
             for (Account acc : accounts.values()) {
-                writer.write(acc.getCardNumber() + " " + acc.getPin() + " " + acc.getBalance());
+                writer.write(acc.getCardNumber() + " " + acc.getPin() + " " + acc.getBalance() + " " + acc.isBlocked() + " " + acc.getBlockedUntil());
                 writer.newLine();
             }
         } catch (IOException e) {
@@ -37,7 +39,7 @@ public class FileAccountRepository implements AccountsRepository {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(" ");
                 if (parts[0].equals(cardNumber)) {
-                    return new Account(parts[0], parts[1], Double.parseDouble(parts[2]));
+                    return new Account(parts[0], parts[1], Double.parseDouble(parts[2]), Boolean.parseBoolean(parts[3]), LocalDateTime.parse(parts[4]));
                 }
             }
         } catch (IOException e) {

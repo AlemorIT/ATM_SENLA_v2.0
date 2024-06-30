@@ -16,6 +16,13 @@ public class Account implements Serializable {
         this.balance = balance;
         this.blocked = false;
     }
+    public Account(String cardNumber, String pin, double balance, boolean blocked, LocalDateTime blockedUntil) {
+        this.cardNumber = cardNumber;
+        this.pin = pin;
+        this.balance = balance;
+        this.blocked = false;
+        this.blockedUntil = blockedUntil;
+    }
 
     // Getters and setters
     public String getCardNumber() {
