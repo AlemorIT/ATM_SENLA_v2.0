@@ -4,8 +4,8 @@ import Model.AccountService;
 import View.ConsoleView;
 
 public class ATMController {
-    private ConsoleView consoleView;
-    private AccountService accountService;
+    private final ConsoleView consoleView;
+    private final AccountService accountService;
     private String cardNumber;
     public ATMController(ConsoleView consoleView, AccountService accountService) {
         this.consoleView = consoleView;
@@ -38,17 +38,15 @@ public class ATMController {
         }
     }
 
-    private boolean handleAuthorization() {
+    private void handleAuthorization() {
         do{
             cardNumber = consoleView.inputCardNumber();
         } while (!accountService.isValidCardNumber(cardNumber));
         String pin = consoleView.inputPin();
         if (accountService.authorizeAccount(cardNumber, pin)) {
             consoleView.showSuccessMessage("Авторизация прошла успешно.");
-            return true;
         } else {
             consoleView.showErrorMessage("Неверный номер карты или ПИН-код.");
-            return false;
         }
     }
 

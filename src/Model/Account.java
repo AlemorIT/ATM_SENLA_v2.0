@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class Account implements Serializable {
-    private String cardNumber;
-    private String pin;
+    private final String cardNumber;
+    private final String pin;
     private double balance;
     private boolean blocked;
     private LocalDateTime blockedUntil;

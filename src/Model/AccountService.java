@@ -1,7 +1,6 @@
 package Model;
 
 import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 
 public class AccountService {
     private final AccountsRepository fileAccountRepository;
@@ -86,7 +85,7 @@ public class AccountService {
         Account account = fileAccountRepository.getAccount(cardNumber);
         if (account != null) {
             account.setBlocked(true);
-            account.setBlockedUntil(LocalDateTime.now().plus(1, ChronoUnit.DAYS));
+            account.setBlockedUntil(LocalDateTime.now().plusDays(1));
             fileAccountRepository.updateAccount(account);
         }
     }
