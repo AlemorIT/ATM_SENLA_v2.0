@@ -14,7 +14,7 @@ public class Account implements Serializable {
         this.cardNumber = cardNumber;
         this.pin = pin;
         this.balance = balance;
-        this.blocked = false;
+        this.blocked = blocked;
         this.blockedUntil = blockedUntil;
     }
 
@@ -36,7 +36,12 @@ public class Account implements Serializable {
     }
 
     public LocalDateTime getBlockedUntil() {
-        return blockedUntil;
+        if (isBlocked()){
+            return blockedUntil;
+        }
+        else{
+            return LocalDateTime.now();
+        }
     }
 
     public void setBalance(double balance) {

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="Added card blocking">
+    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="Fix some warnings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ATMController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ATMController.java" afterDir="false" />
@@ -113,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719749963854</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix some warnings">
+      <option name="closed" value="true" />
+      <created>1719750317388</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719750317388</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +140,38 @@
     <MESSAGE value="Packages add" />
     <MESSAGE value="little fix" />
     <MESSAGE value="Added card blocking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added card blocking" />
+    <MESSAGE value="Fix some warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix some warnings" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/FileAccountRepository.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/AccountService.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/AccountService.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/AccountService.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Controller/ATMController.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

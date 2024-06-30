@@ -57,7 +57,8 @@ public class ATMController {
         if (accountService.authorizeAccount(cardNumber)) {
             consoleView.showSuccessMessage("Авторизация прошла успешно.");
         } else {
-            consoleView.showErrorMessage("Неверный номер карты или ПИН-код.");
+            consoleView.showErrorMessage("Неудалось войти. Обратитесь в банк, ваша карта заблокирована");
+            System.exit(0);
         }
     }
 

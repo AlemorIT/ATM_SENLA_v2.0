@@ -8,10 +8,12 @@ public class AccountService {
     public AccountService(AccountsRepository fileAccountRepository) {
         this.fileAccountRepository = fileAccountRepository;
     }
+
     public boolean authorizePin(String cardNumber, String pin){
         Account account = fileAccountRepository.getAccount(cardNumber);
         return account.getPin().equals(pin);
     }
+
     public boolean authorizeAccount(String cardNumber) {
         Account account = fileAccountRepository.getAccount(cardNumber);
         if (account == null) {
@@ -27,6 +29,7 @@ public class AccountService {
         }
         return true;
     }
+
     public boolean isValidCardNumber(String cardNumber) {
         //The Luhn Formula:
         //Drop the last digit from the number. The last digit is what we want to check against
@@ -52,7 +55,6 @@ public class AccountService {
         }
         return sum % 10 == last_digit;
     }
-
 
     public double checkBalance(String cardNumber) {
         Account account = fileAccountRepository.getAccount(cardNumber);
