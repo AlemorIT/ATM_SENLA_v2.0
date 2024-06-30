@@ -12,7 +12,7 @@ public class AccountService {
         Account account = fileAccountRepository.getAccount(cardNumber);
         return account.getPin().equals(pin);
     }
-    public boolean authorizeAccount(String cardNumber, String pin) {
+    public boolean authorizeAccount(String cardNumber) {
         Account account = fileAccountRepository.getAccount(cardNumber);
         if (account == null) {
             return false;

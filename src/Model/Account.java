@@ -10,12 +10,6 @@ public class Account implements Serializable {
     private boolean blocked;
     private LocalDateTime blockedUntil;
 
-    public Account(String cardNumber, String pin, double balance) {
-        this.cardNumber = cardNumber;
-        this.pin = pin;
-        this.balance = balance;
-        this.blocked = false;
-    }
     public Account(String cardNumber, String pin, double balance, boolean blocked, LocalDateTime blockedUntil) {
         this.cardNumber = cardNumber;
         this.pin = pin;

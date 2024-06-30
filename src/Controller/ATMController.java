@@ -7,7 +7,7 @@ public class ATMController {
     private final ConsoleView consoleView;
     private final AccountService accountService;
     private String cardNumber;
-    private String pin;
+
     public ATMController(ConsoleView consoleView, AccountService accountService) {
         this.consoleView = consoleView;
         this.accountService = accountService;
@@ -44,6 +44,7 @@ public class ATMController {
             cardNumber = consoleView.inputCardNumber();
         } while (!accountService.isValidCardNumber(cardNumber));
         byte counter = 0;
+        String pin;
         do {
             pin = consoleView.inputPin();
             counter +=1;
@@ -53,7 +54,7 @@ public class ATMController {
                 System.exit(0);
             }
         }while(!accountService.authorizePin(cardNumber, pin));
-        if (accountService.authorizeAccount(cardNumber, pin)) {
+        if (accountService.authorizeAccount(cardNumber)) {
             consoleView.showSuccessMessage("Авторизация прошла успешно.");
         } else {
             consoleView.showErrorMessage("Неверный номер карты или ПИН-код.");

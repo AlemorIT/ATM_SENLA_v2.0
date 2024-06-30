@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="little fix">
+    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="Added card blocking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ATMController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ATMController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/FileAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/FileAccountRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719736399638</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added card blocking">
+      <option name="closed" value="true" />
+      <created>1719749963854</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719749963854</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,36 +131,7 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Packages add" />
     <MESSAGE value="little fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="little fix" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/ATMController.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Model/AccountService.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Model/AccountService.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Model/AccountService.java</url>
-          <line>10</line>
-          <properties class="Model.AccountService" method="authorizePin">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added card blocking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added card blocking" />
   </component>
 </project>
