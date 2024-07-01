@@ -1,7 +1,6 @@
 package controller;
 
 import utils.ConsoleReader;
-import utils.InputData;
 import service.AccountServiceHandler;
 import repository.AccountsRepository;
 import repository.FileAccountRepository;

@@ -3,7 +3,6 @@ package service;
 import utils.ApplicationStrings;
 import utils.Reader;
 import view.ConsoleView;
-import utils.InputData;
 
 import java.util.Scanner;
 
@@ -77,7 +76,7 @@ public class AccountServiceHandler {
     }
 
     private void handleWithdrawal() {
-        double amount = consoleReader.ReadDouble(ApplicationStrings.ApplicationStringsEnum.inputPin.GetTitle());
+        double amount = consoleReader.ReadDouble(ApplicationStrings.ApplicationStringsEnum.inputWithdrawalAmount.GetTitle());
         if (accountService.withdraw(cardNumber, amount)) {
             consoleView.showSuccessMessage("Снятие средств успешно выполнено.");
         } else {
@@ -86,7 +85,7 @@ public class AccountServiceHandler {
     }
 
     private void handleDeposit() {
-        double amount = consoleReader.ReadDouble(ApplicationStrings.ApplicationStringsEnum.inputPin.GetTitle());
+        double amount = consoleReader.ReadDouble(ApplicationStrings.ApplicationStringsEnum.inputDepositAmount.GetTitle());
         if (accountService.deposit(cardNumber, amount)) {
             consoleView.showSuccessMessage("Пополнение баланса успешно выполнено.");
         } else {

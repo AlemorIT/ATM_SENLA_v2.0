@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="InputData change, packages correction">
-      <change afterPath="$PROJECT_DIR$/src/utils/ConsoleReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Reader.java" afterDir="false" />
+    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="replaced inputData with ConsoleReader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ATMController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ATMController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/AccountsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/AccountsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/FileAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/FileAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/AccountServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AccountServiceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ApplicationStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ApplicationStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/InputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/InputData.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,17 +47,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JAVA/ATM_SENLA_v2.0/src/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "D:/JAVA/ATM_SENLA_v2.0/src/Main.java",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JAVA\ATM_SENLA_v2.0\src" />
@@ -168,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719841227181</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="replaced inputData with ConsoleReader">
+      <option name="closed" value="true" />
+      <created>1719851265147</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719851265147</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +193,23 @@
     <MESSAGE value="import changed" />
     <MESSAGE value="InputData change, import and packages correction" />
     <MESSAGE value="InputData change, packages correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="InputData change, packages correction" />
+    <MESSAGE value="replaced inputData with ConsoleReader" />
+    <option name="LAST_COMMIT_MESSAGE" value="replaced inputData with ConsoleReader" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/service/AccountServiceHandler.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/service/AccountServiceHandler.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
