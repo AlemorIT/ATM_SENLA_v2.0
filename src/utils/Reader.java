@@ -1,6 +1,7 @@
 package utils;
 
 public interface Reader {
-    public String ReadString(String text);
-    public double ReadDouble(String text);
+
+    String ReadString(String text);
+    double ReadDouble(String text);
 }
