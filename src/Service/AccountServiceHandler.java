@@ -1,15 +1,15 @@
-package Model;
+package Service;
 
-import Service.AccountService;
 import View.ConsoleView;
+import utils.InputData;
 
-public class ServiceHandler {
+public class AccountServiceHandler {
     private final ConsoleView consoleView;
     private final AccountService accountService;
     private String cardNumber;
     InputData inputData;
 
-    public ServiceHandler(AccountService accountService, ConsoleView consoleView, InputData inputData) {
+    public AccountServiceHandler(AccountService accountService, ConsoleView consoleView, InputData inputData) {
         this.consoleView = consoleView;
         this.accountService = accountService;
         this.inputData = inputData;

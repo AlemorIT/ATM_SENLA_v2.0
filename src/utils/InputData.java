@@ -1,4 +1,4 @@
-package Model;
+package utils;
 
 import java.util.Scanner;
 
@@ -6,22 +6,22 @@ public class InputData {
     public Scanner scanner = new Scanner(System.in);
 
     public String inputCardNumber() {
-        System.out.print("Введите номер карты (XXXX-XXXX-XXXX-XXXX): ");
+        System.out.print(ApplicationStrings.ApplicationStringsEnum.inputCardNumber);
         return scanner.nextLine();
     }
 
     public String inputPin() {
-        System.out.print("Введите ПИН-код: ");
+        System.out.print(ApplicationStrings.ApplicationStringsEnum.inputPin);
         return scanner.nextLine();
     }
 
     public double inputWithdrawalAmount() {
-        System.out.print("Введите сумму для снятия: ");
+        System.out.print(ApplicationStrings.ApplicationStringsEnum.inputWithdrawalAmount);
         return scanner.nextDouble();
     }
 
     public double inputDepositAmount() {
-        System.out.print("Введите сумму для пополнения: ");
+        System.out.print(ApplicationStrings.ApplicationStringsEnum.inputDepositAmount);
         return scanner.nextDouble();
     }
 }

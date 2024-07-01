@@ -1,7 +1,7 @@
 package Controller;
 
-import Model.InputData;
-import Model.ServiceHandler;
+import utils.InputData;
+import Service.AccountServiceHandler;
 import Repository.AccountsRepository;
 import Repository.FileAccountRepository;
 import Service.AccountService;
@@ -13,7 +13,7 @@ public class ATMController {
     ConsoleView consoleView = new ConsoleView();
     InputData inputData = new InputData();
     public void execute(){
-        ServiceHandler serviceHandler = new ServiceHandler(accountService, consoleView, inputData);
+        AccountServiceHandler serviceHandler = new AccountServiceHandler(accountService, consoleView, inputData);
         serviceHandler.run();
     }
 }
