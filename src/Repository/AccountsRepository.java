@@ -1,4 +1,6 @@
-package Model;
+package Repository;
+
+import Model.Account;
 
 public interface AccountsRepository {
     void saveAccount(Account account);

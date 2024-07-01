@@ -1,4 +1,7 @@
-package Model;
+package Service;
+
+import Model.Account;
+import Repository.AccountsRepository;
 
 import java.time.LocalDateTime;
 
