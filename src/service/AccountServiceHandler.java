@@ -47,12 +47,12 @@ public class AccountServiceHandler {
     }
     private void handleAuthorization() {
         do{
-            cardNumber = consoleReader.ReadString(ApplicationStrings.ApplicationStringsEnum.inputCardNumber.GetTitle());
+            cardNumber = consoleReader.ReadString(ApplicationStrings.inputCardNumber.GetTitle());
         } while (!accountService.isValidCardNumber(cardNumber));
         byte counter = 0;
         String pin;
         do {
-            pin = consoleReader.ReadString(ApplicationStrings.ApplicationStringsEnum.inputPin.GetTitle());
+            pin = consoleReader.ReadString(ApplicationStrings.inputPin.GetTitle());
             counter +=1;
             if(counter == 3){
                 accountService.blockAccount(cardNumber);
@@ -76,7 +76,7 @@ public class AccountServiceHandler {
     }
 
     private void handleWithdrawal() {
-        double amount = consoleReader.ReadDouble(ApplicationStrings.ApplicationStringsEnum.inputWithdrawalAmount.GetTitle());
+        double amount = consoleReader.ReadDouble(ApplicationStrings.inputWithdrawalAmount.GetTitle());
         if (accountService.withdraw(cardNumber, amount)) {
             consoleView.showSuccessMessage("Снятие средств успешно выполнено.");
         } else {
@@ -85,7 +85,7 @@ public class AccountServiceHandler {
     }
 
     private void handleDeposit() {
-        double amount = consoleReader.ReadDouble(ApplicationStrings.ApplicationStringsEnum.inputDepositAmount.GetTitle());
+        double amount = consoleReader.ReadDouble(ApplicationStrings.inputDepositAmount.GetTitle());
         if (accountService.deposit(cardNumber, amount)) {
             consoleView.showSuccessMessage("Пополнение баланса успешно выполнено.");
         } else {

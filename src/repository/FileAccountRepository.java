@@ -1,6 +1,7 @@
 package repository;
 
 import model.Account;
+import utils.ApplicationSettings;
 
 import java.io.*;
 import java.time.LocalDateTime;
@@ -9,12 +10,10 @@ import java.util.Map;
 
 public class FileAccountRepository implements AccountsRepository {
 
-    private static final String DATA_FILE = "accounts.txt";
-
     @Override
     public void saveAccount(Account account) {
         Map<String, Account> accounts = new HashMap<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(DATA_FILE))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(ApplicationSettings.DATA_FILE.GetTitle()))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(" ");
@@ -25,7 +24,7 @@ public class FileAccountRepository implements AccountsRepository {
         }
         accounts.put(account.getCardNumber(), account);
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(DATA_FILE))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(ApplicationSettings.DATA_FILE.GetTitle()))) {
             for (Account acc : accounts.values()) {
                 writer.write(acc.getCardNumber() + " " + acc.getPin() + " " + acc.getBalance() + " " + acc.isBlocked() + " " + acc.getBlockedUntil());
                 writer.newLine();
@@ -37,7 +36,7 @@ public class FileAccountRepository implements AccountsRepository {
 
     @Override
     public Account getAccount(String cardNumber) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(DATA_FILE))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(ApplicationSettings.DATA_FILE.GetTitle()))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(" ");
