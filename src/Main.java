@@ -1,4 +1,4 @@
-import Controller.ATMController;
+import controller.ATMController;
 
 public class Main {
     public static void main(String[] args) {

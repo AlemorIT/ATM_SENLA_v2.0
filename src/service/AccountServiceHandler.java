@@ -1,6 +1,6 @@
-package Service;
+package service;
 
-import View.ConsoleView;
+import view.ConsoleView;
 import utils.InputData;
 
 public class AccountServiceHandler {

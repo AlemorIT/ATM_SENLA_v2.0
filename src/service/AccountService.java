@@ -1,7 +1,7 @@
-package Service;
+package service;
 
-import Model.Account;
-import Repository.AccountsRepository;
+import model.Account;
+import repository.AccountsRepository;
 import java.time.LocalDateTime;
 
 public class AccountService {

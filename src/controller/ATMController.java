@@ -1,11 +1,11 @@
-package Controller;
+package controller;
 
 import utils.InputData;
-import Service.AccountServiceHandler;
-import Repository.AccountsRepository;
-import Repository.FileAccountRepository;
-import Service.AccountService;
-import View.ConsoleView;
+import service.AccountServiceHandler;
+import repository.AccountsRepository;
+import repository.FileAccountRepository;
+import service.AccountService;
+import view.ConsoleView;
 
 public class ATMController {
     AccountsRepository fileAccountRepository = new FileAccountRepository();

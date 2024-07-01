@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="import changed">
-      <change afterPath="$PROJECT_DIR$/src/utils/ApplicationStrings.java" afterDir="false" />
+    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="InputData change, import and packages correction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ATMController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ATMController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/InputData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/ServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ServiceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/AccountServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/AccountServiceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ApplicationStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ApplicationStrings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/InputData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719838619551</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="InputData change, import and packages correction">
+      <option name="closed" value="true" />
+      <created>1719840931580</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719840931580</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +177,7 @@
     <MESSAGE value="Card block fix, and change save data methods" />
     <MESSAGE value="Console view changed, controller changed, better package division added" />
     <MESSAGE value="import changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="import changed" />
+    <MESSAGE value="InputData change, import and packages correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="InputData change, import and packages correction" />
   </component>
 </project>

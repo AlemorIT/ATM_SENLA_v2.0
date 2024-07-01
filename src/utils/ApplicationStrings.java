@@ -13,9 +13,7 @@ public class ApplicationStrings {
         ApplicationStringsEnum(String title) {
             this.title = title;
         }
-
-        @Override
-        public String toString() {
+        public String GetTitle() {
             return title;
         }
     }
