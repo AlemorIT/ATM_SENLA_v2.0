@@ -3,6 +3,7 @@ package utils;
 import java.util.Scanner;
 
 public class InputData {
+
     public Scanner scanner = new Scanner(System.in);
 
     public String inputCardNumber() {

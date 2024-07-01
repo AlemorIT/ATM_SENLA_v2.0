@@ -1,26 +1,33 @@
 package service;
 
+import utils.ApplicationStrings;
+import utils.Reader;
 import view.ConsoleView;
 import utils.InputData;
 
+import java.util.Scanner;
+
 public class AccountServiceHandler {
+
     private final ConsoleView consoleView;
     private final AccountService accountService;
     private String cardNumber;
-    InputData inputData;
+    Reader consoleReader;
+    public Scanner scanner = new Scanner(System.in);
 
-    public AccountServiceHandler(AccountService accountService, ConsoleView consoleView, InputData inputData) {
+    public AccountServiceHandler(AccountService accountService, ConsoleView consoleView, Reader consoleReader) {
         this.consoleView = consoleView;
         this.accountService = accountService;
-        this.inputData = inputData;
+        this.consoleReader = consoleReader;
+
     }
     public void run() {
         handleAuthorization();
         while (true) {
 
             consoleView.showMenu();
-            int choice = inputData.scanner.nextInt();
-            inputData.scanner.nextLine();
+            int choice = scanner.nextInt();
+            scanner.nextLine();
             switch (choice) {
                 case 1:
                     handleBalance();
@@ -41,12 +48,12 @@ public class AccountServiceHandler {
     }
     private void handleAuthorization() {
         do{
-            cardNumber = inputData.inputCardNumber();
+            cardNumber = consoleReader.ReadString(ApplicationStrings.ApplicationStringsEnum.inputCardNumber.GetTitle());
         } while (!accountService.isValidCardNumber(cardNumber));
         byte counter = 0;
         String pin;
         do {
-            pin = inputData.inputPin();
+            pin = consoleReader.ReadString(ApplicationStrings.ApplicationStringsEnum.inputPin.GetTitle());
             counter +=1;
             if(counter == 3){
                 accountService.blockAccount(cardNumber);
@@ -70,7 +77,7 @@ public class AccountServiceHandler {
     }
 
     private void handleWithdrawal() {
-        double amount = inputData.inputWithdrawalAmount();
+        double amount = consoleReader.ReadDouble(ApplicationStrings.ApplicationStringsEnum.inputPin.GetTitle());
         if (accountService.withdraw(cardNumber, amount)) {
             consoleView.showSuccessMessage("Снятие средств успешно выполнено.");
         } else {
@@ -79,7 +86,7 @@ public class AccountServiceHandler {
     }
 
     private void handleDeposit() {
-        double amount = inputData.inputDepositAmount();
+        double amount = consoleReader.ReadDouble(ApplicationStrings.ApplicationStringsEnum.inputPin.GetTitle());
         if (accountService.deposit(cardNumber, amount)) {
             consoleView.showSuccessMessage("Пополнение баланса успешно выполнено.");
         } else {

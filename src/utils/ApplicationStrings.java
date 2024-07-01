@@ -2,7 +2,7 @@ package utils;
 
 public class ApplicationStrings {
 
-    enum ApplicationStringsEnum {
+    public enum ApplicationStringsEnum {
         inputCardNumber ("Введите номер карты (XXXX-XXXX-XXXX-XXXX): "),
         inputPin ("Введите ПИН-код: "),
         inputWithdrawalAmount("Введите сумму для снятия: "),

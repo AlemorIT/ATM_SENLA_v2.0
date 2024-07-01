@@ -1,6 +1,7 @@
 package view;
 
 public class ConsoleView {
+
     public void showMenu() {
         System.out.println("---------- Банкомат ----------");
         System.out.println("1. Проверить баланс");

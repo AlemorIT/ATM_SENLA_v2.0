@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FileAccountRepository implements AccountsRepository {
+
     private static final String DATA_FILE = "accounts.txt";
 
     @Override

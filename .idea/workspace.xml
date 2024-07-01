@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="InputData change, import and packages correction">
+    <list default="true" id="be50b747-ab00-4e15-9203-9655a7c45bb9" name="Changes" comment="InputData change, packages correction">
+      <change afterPath="$PROJECT_DIR$/src/utils/ConsoleReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ATMController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ATMController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/AccountServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/AccountServiceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/accounts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ATMController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ATMController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/AccountsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/AccountsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/FileAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/FileAccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AccountServiceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AccountServiceHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/ApplicationStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ApplicationStrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/InputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/InputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ConsoleView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719840931580</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="InputData change, packages correction">
+      <option name="closed" value="true" />
+      <created>1719841227181</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719841227181</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +192,7 @@
     <MESSAGE value="Console view changed, controller changed, better package division added" />
     <MESSAGE value="import changed" />
     <MESSAGE value="InputData change, import and packages correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="InputData change, import and packages correction" />
+    <MESSAGE value="InputData change, packages correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="InputData change, packages correction" />
   </component>
 </project>
