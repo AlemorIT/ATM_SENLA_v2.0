@@ -100,6 +100,7 @@ public class AccountServiceHandler {
         }
     }
 
+
     private void handleDeposit() {
         double amount = consoleReader.ReadDouble(ApplicationStrings.inputDepositAmount.GetTitle());
         if (accountService.deposit(cardNumber, amount)) {

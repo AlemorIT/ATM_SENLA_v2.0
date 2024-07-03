@@ -1,5 +1,6 @@
 package utils;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConsoleReader implements Reader{
@@ -14,7 +15,12 @@ public class ConsoleReader implements Reader{
 
     @Override
     public double ReadDouble(String text){
-        System.out.println(text);
-        return scanner.nextDouble();
+        String stroka = ReadString(text);
+        try {
+            return Double.parseDouble(stroka);
+        }
+        catch(InputMismatchException e){
+            return Double.NEGATIVE_INFINITY;
+        }
     }
 }

@@ -2,7 +2,6 @@ package service;
 
 import model.Account;
 import repository.AccountsRepository;
-import utils.ApplicationStrings;
 
 import java.time.LocalDateTime;
 
@@ -43,26 +42,29 @@ public class AccountService {
         //Add all the numbers together
         //The check digit (the last number of the card) is the amount that you would need to add to get a multiple of 10 (Modulo 10)
         // Проверка соответствия формату "XXXX-XXXX-XXXX-XXXX"
-        boolean result = false;
+        boolean result;
         try {
-            cardNumber = cardNumber.replace("-", "");
-            int last_digit = Character.getNumericValue(cardNumber.charAt(cardNumber.length() - 1));
-            cardNumber = cardNumber.substring(0, cardNumber.length() - 1);
-            cardNumber = new StringBuilder(cardNumber).reverse().toString();
-            int sum = 0;
-            for (int i = 0; i < cardNumber.length(); i++) {
-                int number = Character.getNumericValue(cardNumber.charAt(i));
-                if (i % 2 == 1) {
-                    number *= 2;
-                    if (number > 9) {
-                        number -= 9;
+            if (cardNumber.length() == 19) {
+                cardNumber = cardNumber.replace("-", "");
+                int last_digit = Character.getNumericValue(cardNumber.charAt(cardNumber.length() - 1));
+                cardNumber = cardNumber.substring(0, cardNumber.length() - 1);
+                cardNumber = new StringBuilder(cardNumber).reverse().toString();
+                int sum = 0;
+                for (int i = 0; i < cardNumber.length(); i++) {
+                    int number = Character.getNumericValue(cardNumber.charAt(i));
+                    if (i % 2 == 1) {
+                        number *= 2;
+                        if (number > 9) {
+                            number -= 9;
+                        }
+                        sum += number;
                     }
-                    sum += number;
                 }
+                result = (sum % 10 == last_digit);
+            } else {
+                return false;
             }
-            result = (sum % 10 == last_digit);
-        }
-        catch (StringIndexOutOfBoundsException e){
+        } catch (StringIndexOutOfBoundsException e) {
             return false;
         }
         return result;
@@ -90,7 +92,7 @@ public class AccountService {
     public boolean deposit(String cardNumber, double amount) {
         if (amount <= 1000000 && amount > 0) {
             Account account = fileAccountRepository.getAccount(cardNumber);
-            if (account != null ) {
+            if (account != null) {
                 account.setBalance(account.getBalance() + amount);
                 fileAccountRepository.updateAccount(account);
                 return true;
