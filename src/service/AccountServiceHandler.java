@@ -11,14 +11,13 @@ public class AccountServiceHandler {
     private final ConsoleView consoleView;
     private final AccountService accountService;
     private String cardNumber;
-    Reader consoleReader;
+    private final Reader consoleReader;
     public Scanner scanner = new Scanner(System.in);
 
     public AccountServiceHandler(AccountService accountService, ConsoleView consoleView, Reader consoleReader) {
         this.consoleView = consoleView;
         this.accountService = accountService;
         this.consoleReader = consoleReader;
-
     }
 
     public void run() {
@@ -99,7 +98,6 @@ public class AccountServiceHandler {
             consoleView.showErrorMessage("Недостаточно средств на счете.");
         }
     }
-
 
     private void handleDeposit() {
         double amount = consoleReader.ReadDouble(ApplicationStrings.inputDepositAmount.GetTitle());

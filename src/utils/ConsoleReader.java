@@ -15,9 +15,9 @@ public class ConsoleReader implements Reader{
 
     @Override
     public double ReadDouble(String text){
-        String dataInput = ReadString(text);
+        String inputData = ReadString(text);
         try {
-            return Double.parseDouble(dataInput);
+            return Double.parseDouble(inputData);
         }
         catch(InputMismatchException e){
             return Double.NEGATIVE_INFINITY;

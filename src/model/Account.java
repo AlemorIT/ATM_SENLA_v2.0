@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class Account implements Serializable {
+
     private final String cardNumber;
     private final String pin;
     private double balance;
@@ -18,7 +19,6 @@ public class Account implements Serializable {
         this.blockedUntil = blockedUntil;
     }
 
-    // Getters and setters
     public String getCardNumber() {
         return cardNumber;
     }
